@@ -19,6 +19,6 @@ mongoose.connect('mongodb+srv://usr_futbolista:Boris2022@cluster0.06xre5t.mongod
     }
     console.log('BD online');
 }) 
-server.Start(()=>{
-    console.log(`servidor corriendo en puerto: ${server.port}`)
+server.Start(()=>{ 
+    console.log(`servidor corriendo en puerto: ${server.port}`)  
 })
