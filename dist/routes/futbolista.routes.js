@@ -38,10 +38,10 @@ futbolistaRoutes.post('/', (req, res) => {
         Posicion: body.Posicion,
         Imagen: body.Imagen
     };
-    futbolista_model_1.Futbolista.create(futbolista).then(futbolistaDb => {
+    futbolista_model_1.Futbolista.create(futbolista).then(futbolistaDB => {
         return res.json({
             ok: true,
-            futbolistaDb
+            futbolistaDB
         });
     }).catch(err => {
         return res.json({

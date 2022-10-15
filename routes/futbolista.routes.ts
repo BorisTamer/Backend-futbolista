@@ -40,11 +40,11 @@ futbolistaRoutes.post('/',(req:Request,res:Response)=>{
         Posicion:body.Posicion,
         Imagen:body.Imagen
     }
-    Futbolista.create(futbolista).then(futbolistaDb =>{
+    Futbolista.create(futbolista).then(futbolistaDB =>{
 
         return res.json({
             ok:true,
-            futbolistaDb
+            futbolistaDB
         })
 
     }).catch(err=>{
