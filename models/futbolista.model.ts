@@ -1,7 +1,8 @@
 import { Document, model, Schema } from "mongoose";
 
 const futbolistaSchema = new Schema({
-    nombre:{
+    Nombre:{
+
         type : String,
         require:[true,'El nombre es requerido']
     },

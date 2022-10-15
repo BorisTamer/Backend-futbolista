@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Futbolista = void 0;
 const mongoose_1 = require("mongoose");
 const futbolistaSchema = new mongoose_1.Schema({
-    nombre: {
+    Nombre: {
         type: String,
         require: [true, 'El nombre es requerido']
     },
