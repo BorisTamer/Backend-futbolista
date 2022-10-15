@@ -56,7 +56,7 @@ futbolistaRoutes.post('/',(req:Request,res:Response)=>{
 
     })
         
-})
+});
 
 futbolistaRoutes.put('/:id', (req:Request, res:Response)=>{
     
