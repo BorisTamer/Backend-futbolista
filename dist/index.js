@@ -13,7 +13,7 @@ server.app.use(body_parser_1.default.json());
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use('/', default_routes_1.default);
 server.app.use('/Futbolista', futbolista_routes_1.default);
-mongoose_1.default.connect('mongodb+srv://usr_futbolista:Boris2022@cluster0.06xre5t.mongodb.net/futbolistaDB', (error) => {
+mongoose_1.default.connect('mongodb+srv://usr_BorisTamer:Boris2022@cluster0.9ovpefb.mongodb.net/futbolistaDB', (error) => {
     if (error) {
         throw error;
     }
