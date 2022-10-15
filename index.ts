@@ -13,12 +13,12 @@ server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/',defaultRouter);
 server.app.use('/Futbolista', futbolistaRoutes);
 
-mongoose.connect('mongodb://localhost:27017/futbolistaDB',(error)=>{
+mongoose.connect('mongodb+srv://usr_futbolista:Boris2022@cluster0.06xre5t.mongodb.net/futbolistaDB',(error)=>{
     if (error) {
         throw error;        
     }
     console.log('BD online');
-})
+}) 
 server.Start(()=>{
     console.log(`servidor corriendo en puerto: ${server.port}`)
 })

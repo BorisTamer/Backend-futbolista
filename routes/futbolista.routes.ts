@@ -12,7 +12,7 @@ futbolistaRoutes.get('/',async(req:Request,res:Response)=>{
         futbolista
     })
 
-})
+});
 
 futbolistaRoutes.get('/paging',async(req:Request,res:Response)=>{
 
@@ -40,11 +40,11 @@ futbolistaRoutes.post('/',(req:Request,res:Response)=>{
         Posicion:body.Posicion,
         Imagen:body.Imagen
     }
-    Futbolista.create(futbolista).then(futbolistaDB =>{
+    Futbolista.create(futbolista).then(futbolistaDb =>{
 
         return res.json({
             ok:true,
-            futbolistaDB
+            futbolistaDb
         })
 
     }).catch(err=>{
@@ -56,7 +56,7 @@ futbolistaRoutes.post('/',(req:Request,res:Response)=>{
 
     })
         
-});
+})
 
 futbolistaRoutes.put('/:id', (req:Request, res:Response)=>{
     
@@ -74,7 +74,7 @@ futbolistaRoutes.put('/:id', (req:Request, res:Response)=>{
     Futbolista.findByIdAndUpdate(futbolistaId,futbolista).then (futbolistaDb=>{
 
         return res.json({
-            ok:false,
+            ok:true,
             futbolistaDb
         })
 
@@ -93,7 +93,9 @@ futbolistaRoutes.delete('/', async(req:Request, res:Response)=>{
     const futbolistaId = req.query.id;
 
         if(!futbolistaId){
+
             return res.json({
+
                 ok:false,
                 msj:"El registro solicitado no existe"
                     
@@ -111,7 +113,7 @@ futbolistaRoutes.delete('/', async(req:Request, res:Response)=>{
 
         }).catch(err=>{
             return res.json({
-                ok:true,
+                ok:false,
                 msj:"Registro eliminado"
                     
             })
@@ -120,6 +122,6 @@ futbolistaRoutes.delete('/', async(req:Request, res:Response)=>{
     
      
 
-}) 
+})
 
 export default futbolistaRoutes;   

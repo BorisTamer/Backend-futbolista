@@ -38,10 +38,10 @@ futbolistaRoutes.post('/', (req, res) => {
         Posicion: body.Posicion,
         Imagen: body.Imagen
     };
-    futbolista_model_1.Futbolista.create(futbolista).then(futbolistaDB => {
+    futbolista_model_1.Futbolista.create(futbolista).then(futbolistaDb => {
         return res.json({
             ok: true,
-            futbolistaDB
+            futbolistaDb
         });
     }).catch(err => {
         return res.json({
@@ -61,7 +61,7 @@ futbolistaRoutes.put('/:id', (req, res) => {
     };
     futbolista_model_1.Futbolista.findByIdAndUpdate(futbolistaId, futbolista).then(futbolistaDb => {
         return res.json({
-            ok: false,
+            ok: true,
             futbolistaDb
         });
     });
@@ -85,7 +85,7 @@ futbolistaRoutes.delete('/', (req, res) => __awaiter(void 0, void 0, void 0, fun
         });
     }).catch(err => {
         return res.json({
-            ok: true,
+            ok: false,
             msj: "Registro eliminado"
         });
     });
