@@ -59,10 +59,10 @@ futbolistaRoutes.put('/:id', (req, res) => {
         Posicion: body.Posicion,
         Imagen: body.Imagen
     };
-    futbolista_model_1.Futbolista.findByIdAndUpdate(futbolistaId, futbolista).then(futbolistaDb => {
+    futbolista_model_1.Futbolista.findByIdAndUpdate(futbolistaId, futbolista).then(futbolistaDB => {
         return res.json({
             ok: true,
-            futbolistaDb
+            futbolistaDB
         });
     });
     return res.json({

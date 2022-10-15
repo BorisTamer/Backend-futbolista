@@ -71,11 +71,11 @@ futbolistaRoutes.put('/:id', (req:Request, res:Response)=>{
         Imagen:body.Imagen
     }
 
-    Futbolista.findByIdAndUpdate(futbolistaId,futbolista).then (futbolistaDb=>{
+    Futbolista.findByIdAndUpdate(futbolistaId,futbolista).then (futbolistaDB=>{
 
         return res.json({
             ok:true,
-            futbolistaDb
+            futbolistaDB
         })
 
     })  
