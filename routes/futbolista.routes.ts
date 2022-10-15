@@ -32,7 +32,7 @@ futbolistaRoutes.get('/paging',async(req:Request,res:Response)=>{
 
 
 futbolistaRoutes.post('/',(req:Request,res:Response)=>{
-
+ 
     const body = req.body;
     const futbolista = {
         Nombre:body.Nombre,
